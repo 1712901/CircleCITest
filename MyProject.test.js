@@ -1,7 +1,7 @@
 const sum = require('./MyProject')
 
-test('adds 1 + 2 to equal 3',sumTest);
-test('adds 1 + 2 to equal 3',sumTest2);
+test('TC1',sumTest);
+test('TC2',sumTest2);
 
 function sumTest(){
   expect(sum(1,2)).toBe(3);
