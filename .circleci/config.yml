@@ -6,14 +6,10 @@ jobs:
       steps:
         - checkout
         - run: npm install
-test:
-  executor: windows/default
-  steps:
-    - checkout
-    - run: npm test
-    - store_artifacts:
-        path: ./test-results
-        destination: test-results
-    - store_test_results:
-        path: ./test-results
-        
+        - run: npm test
+        - store_artifacts:
+            path: ./test-results
+            destination: test-results
+        - store_test_results:
+            path: ./test-results
+            
