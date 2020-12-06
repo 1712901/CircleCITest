@@ -12,6 +12,7 @@ jobs:
       steps:
         - attach_worksapce:
             at: .
+        - checkout:
         - run: npm test
         - store_artifacts:
             path: test-results
