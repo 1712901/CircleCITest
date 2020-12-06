@@ -7,8 +7,6 @@ jobs:
         - checkout
         - run: npm install
         - run: npm test
-        - store_artifacts:
-            path: .
         - store_test_results:
-            path: test-results
+            path: .
         
