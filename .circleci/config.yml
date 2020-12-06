@@ -8,7 +8,7 @@ jobs:
         - run: npm install
         - run: npm test
         - store_artifacts:
-            path: test-results/jest/test-results.xml
+            path: test-results
             destination: test-results
         - store_test_results:
             path: test-results
