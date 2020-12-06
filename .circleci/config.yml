@@ -7,3 +7,15 @@ jobs:
         - checkout
         - run: npm install
         - run: npm test
+  tests:
+      docker:
+        - image: circleci/node:12.13.0
+      paralllism: 2
+      steps:
+        - attach_worksapce:
+            at: .
+        - run: circleci test glob '**/*.test.js'
+        - store_artifacts:
+            path: test-results
+        - store_test_results:
+            path: test-results
