@@ -6,15 +6,9 @@ jobs:
       steps:
         - checkout
         - run: npm install
-  tests:
-      docker:
-        - image: circleci/node:12.13.0
-      steps:
-        - attach_worksapce:
-            at: .
-        - checkout:
         - run: npm test
         - store_artifacts:
             path: test-results
         - store_test_results:
             path: test-results
+        
