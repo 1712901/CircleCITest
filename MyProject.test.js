@@ -7,5 +7,5 @@ function sumTest(){
   expect(sum(1,2)).toBe(3);
 };
 function sumTest2(){
-  expect(sum(3,2)).toBe(10);
+  expect(sum(3,2)).toBe(5);
 };
